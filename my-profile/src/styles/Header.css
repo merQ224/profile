@@ -1,8 +1,11 @@
 header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #393D7E;
+    color: #FFFFFF;
+
 }
 
 #initial {
@@ -15,6 +18,7 @@ nav {
     gap: 2rem;
     background-color: #393D7E;
     border-radius: 25px;
+    position: fixed;
     
 
     a {

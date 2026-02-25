@@ -1,0 +1,19 @@
+.Landing {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    background-color: #393D7E;
+    color: #6DC3BB;
+}
+
+.intro {
+    font-size: 2rem;
+}
+
+.passion {
+    color: #FFFFFF;
+}
