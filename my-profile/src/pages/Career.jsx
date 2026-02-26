@@ -53,7 +53,7 @@ function Career() {
             <h2>Career</h2>
 
             <div className="Career_timeline">
-            {careerWithPosition.map((item) => (
+            {careerWithPosition.map((item, i) => (
                 <div
                 key={i}
                 className="Career_item"
