@@ -17,7 +17,7 @@ function Career() {
 
             const leftPercent = ((start - timelineStart) / totalTime) * 100;
             const widthPercentRaw = ((end - start) / totalTime) * 100;
-            const widthPercent = Math.max(widthPercentRaw, MIN_WIDTH);
+            let  widthPercent = Math.max(widthPercentRaw, MIN_WIDTH);
 
             if (leftPercent + widthPercent > 100) {
                 widthPercent = 100 - leftPercent;
@@ -53,7 +53,7 @@ function Career() {
             <h2>Career</h2>
 
             <div className="Career_timeline">
-            {careerWithPosition.map((item, i) => (
+            {careerWithPosition.map((item) => (
                 <div
                 key={i}
                 className="Career_item"
