@@ -2,7 +2,7 @@ import '../styles/Landing.css'
 
 function Landing() {
     return (
-        <section className='Landing'>
+        <section id='Landing'>
             <div className='intro'>
                 <h1>Hi! I am Winston</h1>
                 <h2>Software Developer</h2>

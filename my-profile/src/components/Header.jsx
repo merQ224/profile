@@ -5,10 +5,10 @@ function Header() {
         <header>
             <h2 id='initial'>WN</h2>
             <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#career">Career</a>
-                <a href="#projects">Projects</a>
+                <a href="#">Home</a>
+                <a href="#About">About</a>
+                <a href="#Career">Career</a>
+                <a href="#Projects">Projects</a>
             </nav>
         </header>
     )

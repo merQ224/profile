@@ -3,7 +3,7 @@ import AboutImage from '../assets/butterfly.jpeg'
 
 function About() {
     return (
-        <section className="About">
+        <section id="About">
             <div className="About_header">
                 <h2>About Me</h2>
                 <p> Hey, I’m Winston 👋🏽 </p>
