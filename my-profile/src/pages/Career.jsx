@@ -1,8 +1,11 @@
-import '../styles/Career.css'
+import { useState, useMemo } from 'react';
 import { careerData } from '../data/career.js'
-import { useMemo } from 'react';
+import Button from '../components/Button.jsx'
+import '../styles/Career.css'
 
 function Career() {
+    const [selectedRole, setSelectedRole] = useState(null);
+    
     const buildCareerTimeline = (careerData, MIN_WIDTH = 15) => {
         const startDates = careerData.map(c => new Date(c.start));
         const endDates = careerData.map(c => new Date(c.end));
@@ -62,6 +65,7 @@ function Career() {
                     width: `${item.widthPercent}%`,
                     top: `${i * 60}px`
                 }}
+                onClick={() => setSelectedRole(item)}
                 >
                     <span>
                         {item.role}{" "}
@@ -72,6 +76,33 @@ function Career() {
                 </div>
             ))}
             </div>
+            
+            {selectedRole && (
+                <div className="Career_modal_overlay" onClick={() => setSelectedRole(null)}>
+                    <div className="Career_modal" onClick={(e) => e.stopPropagation()}>
+                        <h3>{selectedRole.role}</h3>
+                        <p className="Career_duration">
+                            {getDurationLabel(selectedRole.start, selectedRole.end)}
+                        </p>
+
+                        <p className="Career_description">
+                            Description: {selectedRole.description}
+                        </p>
+
+                        <div className="Career_skills"> Skills Learnt: 
+                            {selectedRole.skills?.map((skill, idx) => (
+                            <span key={idx} className="Career_skill">
+                                {" "}{skill}
+                            </span>
+                            ))}
+                        </div>
+
+                        <Button onClick={() => setSelectedRole(null)}>
+                            Close
+                        </Button>
+                    </div>
+                </div>
+            )}
         </section>
     )
 }
