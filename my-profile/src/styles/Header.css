@@ -19,6 +19,7 @@ nav {
     background-color: #393D7E;
     border-radius: 25px;
     position: fixed;
+    z-index: 1;
     
 
     a {

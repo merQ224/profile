@@ -90,8 +90,8 @@ function Career() {
                         </p>
 
                         <div className="Career_skills"> Skills Learnt: 
-                            {selectedRole.skills?.map((skill, idx) => (
-                            <span key={idx} className="Career_skill">
+                            {selectedRole.skills?.map((skill, i) => (
+                            <span key={i} className="Career_skill">
                                 {" "}{skill}
                             </span>
                             ))}
