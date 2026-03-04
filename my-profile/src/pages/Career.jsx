@@ -97,7 +97,7 @@ function Career() {
                             ))}
                         </div>
 
-                        <Button onClick={() => setSelectedRole(null)}>
+                        <Button type="button" onClick={() => setSelectedRole(null)}>
                             Close
                         </Button>
                     </div>

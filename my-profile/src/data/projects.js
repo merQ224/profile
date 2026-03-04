@@ -1,3 +1,5 @@
+import valentine from '../assets/project-gif/valentine.gif';
+
 export const projectData = [
     {
         title: "CSV Upload",
@@ -11,7 +13,7 @@ export const projectData = [
         area: "Frontend",
         description: "A funny App to send to your valentine to ask if they will be your valentine. Deployed to production via github pages.",
         language: "React, TypeScript, JavaScript, CSS, HTML",
-        gif: "valentine.gif"
+        gif: valentine
     },
     {
         title: "Summarise Service Request API",

@@ -31,7 +31,6 @@ src/
 - components/ → Reusable UI components
 - pages/ → High-level sections (Landing, About, Career, Projects)
 - data/ → Static content separated from UI
-- hooks/ → Custom reusable logic
 - assets/ → Images and static files
 - main.jsx → Application entry point
 - App.jsx → Root component composition
