@@ -57,21 +57,9 @@ function Career() {
 
             <div className="Career_timeline">
             {careerWithPosition.map((item, i) => (
-                <div
-                key={i}
-                className="Career_item"
-                style={{
-                    left: `${item.leftPercent}%`,
-                    width: `${item.widthPercent}%`,
-                    top: `${i * 60}px`
-                }}
-                onClick={() => setSelectedRole(item)}
-                >
+                <div key={i} className="Career_item" onClick={() => setSelectedRole(item)}>
                     <span>
-                        {item.role}{" "}
-                        <span className="Career_years">
-                            {getDurationLabel(item.start, item.end)}
-                        </span>
+                        {item.role}
                     </span>
                 </div>
             ))}

@@ -3,6 +3,7 @@
     background-color: #393D7E;
     color: #6DC3BB;
     text-align: center;
+    height: 90vh;
 
     h2 {
         margin-bottom: 4rem;
@@ -17,7 +18,6 @@
 
 .Career_item {
     box-sizing: border-box;
-    position: absolute;
     height: 40px;
     background: #5459AC;
     color: #FFF;
