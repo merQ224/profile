@@ -1,34 +1,10 @@
-import { useState, useMemo } from 'react';
+import { useState    } from 'react';
 import { careerData } from '../data/career.js'
 import Button from '../components/Button.jsx'
 import '../styles/Career.css'
 
 function Career() {
-    const [selectedRole, setSelectedRole] = useState(null);
-    
-    const buildCareerTimeline = (careerData, MIN_WIDTH = 15) => {
-        const startDates = careerData.map(c => new Date(c.start));
-        const endDates = careerData.map(c => new Date(c.end));
-
-        const timelineStart = new Date(Math.min(...startDates));
-        const timelineEnd = new Date(Math.max(...endDates));
-        const totalTime = timelineEnd - timelineStart;
-
-        return careerData.map(c => {
-            const start = new Date(c.start);
-            const end = new Date(c.end);
-
-            const leftPercent = ((start - timelineStart) / totalTime) * 100;
-            const widthPercentRaw = ((end - start) / totalTime) * 100;
-            let  widthPercent = Math.max(widthPercentRaw, MIN_WIDTH);
-
-            if (leftPercent + widthPercent > 100) {
-                widthPercent = 100 - leftPercent;
-            }
-
-            return { ...c, leftPercent, widthPercent };
-        });
-    };
+    const [selectedRole, setSelectedRole] = useState(careerData[0]);
 
     const getDurationLabel = (startStr, endStr) => {
         const start = new Date(startStr);
@@ -47,50 +23,41 @@ function Career() {
         return `${months} mo`;
     };
 
-    const careerWithPosition = useMemo(() => {
-        return buildCareerTimeline(careerData);
-    }, []);
-
     return (
         <section id="Career">
             <h2>Career</h2>
 
             <div className="Career_timeline">
-            {careerWithPosition.map((item, i) => (
-                <div key={i} className="Career_item" onClick={() => setSelectedRole(item)}>
-                    <span>
-                        {item.role}
-                    </span>
-                </div>
-            ))}
+                {careerData.map((item) => (
+                    <div 
+                        className={`Career_item ${selectedRole.role === item.role ? "active" : ""}`} 
+                        onClick={() => setSelectedRole(item)}
+                    >
+                        <div className="Career_circle"></div>
+                        <span className="Career_label">{item.role}</span>
+                    </div>
+                ))}
             </div>
             
-            {selectedRole && (
-                <div className="Career_modal_overlay" onClick={() => setSelectedRole(null)}>
-                    <div className="Career_modal" onClick={(e) => e.stopPropagation()}>
-                        <h3>{selectedRole.role}</h3>
-                        <p className="Career_duration">
-                            {getDurationLabel(selectedRole.start, selectedRole.end)}
-                        </p>
+            <div className="Career_details">
+                <h3>{selectedRole.role}</h3>
+                <p className="Career_duration">
+                    {getDurationLabel(selectedRole.start, selectedRole.end)}
+                </p>
+                <p className="Career_description">
+                    {selectedRole.description}
+                </p>
 
-                        <p className="Career_description">
-                            Description: {selectedRole.description}
-                        </p>
-
-                        <div className="Career_skills"> Skills Learnt: 
-                            {selectedRole.skills?.map((skill, i) => (
-                            <span key={i} className="Career_skill">
-                                {" "}{skill}
-                            </span>
-                            ))}
-                        </div>
-
-                        <Button type="button" onClick={() => setSelectedRole(null)}>
-                            Close
-                        </Button>
-                    </div>
+                <div className="Career_skills">
+                    {selectedRole.skills?.map((skills, i) => {
+                        <span key={i}>{skills}</span>
+                    })}
                 </div>
-            )}
+
+                <Button onClick={() => selectedRole(null)}>
+                    Close
+                </Button>
+            </div>
         </section>
     )
 }
