@@ -40,8 +40,8 @@ function Career() {
             </div>
             
             <div className="Career_details">
-                <h3>{selectedRole.role}</h3>
-                <p className="Career_duration">
+                <h3 className="Career_Title">{selectedRole.role}</h3>
+                <p>
                     {getDurationLabel(selectedRole.start, selectedRole.end)}
                 </p>
                 <p className="Career_description">
@@ -53,10 +53,6 @@ function Career() {
                         <span key={i}>{skills}</span>
                     })}
                 </div>
-
-                <Button onClick={() => selectedRole(null)}>
-                    Close
-                </Button>
             </div>
         </section>
     )
