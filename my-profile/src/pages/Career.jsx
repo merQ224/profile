@@ -4,7 +4,7 @@ import Button from '../components/Button.jsx'
 import '../styles/Career.css'
 
 function Career() {
-    const [selectedRole, setSelectedRole] = useState(careerData[0]);
+    const [selectedRole, setSelectedRole] = useState(careerData[5]);
 
     const getDurationLabel = (startStr, endStr) => {
         const start = new Date(startStr);
