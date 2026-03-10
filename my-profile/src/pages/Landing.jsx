@@ -8,7 +8,7 @@ function Landing() {
                 <h2>Software Developer</h2>
             </div>
             <div className='passion'>
-                <h4>I am passionate about .....</h4>
+                <h4>I am passionate about mastering my craft and putting bugs to rest.</h4>
             </div>
         </section>
     )
