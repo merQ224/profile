@@ -1,10 +1,9 @@
 import { useState    } from 'react';
 import { careerData } from '../data/career.js'
-import Button from '../components/Button.jsx'
 import '../styles/Career.css'
 
 function Career() {
-    const [selectedRole, setSelectedRole] = useState(careerData[5]);
+    const [data, setCareerData] = useState(careerData[5]);
 
     const getDurationLabel = (startStr, endStr) => {
         const start = new Date(startStr);
@@ -30,8 +29,8 @@ function Career() {
             <div className="Career_timeline">
                 {careerData.map((item) => (
                     <div 
-                        className={`Career_item ${selectedRole.role === item.role ? "active" : ""}`} 
-                        onClick={() => setSelectedRole(item)}
+                        className={`Career_item ${data.role === item.role ? "active" : ""}`} 
+                        onClick={() => setCareerData(item)}
                     >
                         <div className="Career_circle"></div>
                         <span className="Career_label">{item.role}</span>
@@ -40,17 +39,18 @@ function Career() {
             </div>
             
             <div className="Career_details">
-                <h3 className="Career_Title">{selectedRole.role}</h3>
+                <h3 className="Career_Title">{data.role}</h3>
                 <p>
-                    {getDurationLabel(selectedRole.start, selectedRole.end)}
+                    {getDurationLabel(data.start, data.end)}
                 </p>
-                <p className="Career_description">
-                    {selectedRole.description}
-                </p>
+                
+                {data.description?.map((paragraph, i) => (
+                    <p key={i} className="Career_description">{paragraph}</p>
+                ))}
 
                 <div className="Career_skills">
-                    {selectedRole.skills?.map((skills, i) => {
-                        <span key={i}>{skills}</span>
+                    {data.skills?.map((skill, i) => {
+                        <span key={i}>{skill}</span>
                     })}
                 </div>
             </div>
