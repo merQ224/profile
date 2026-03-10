@@ -18,8 +18,8 @@ function Career() {
         if (years >= 1) {
             return `${years}+ yr${years > 1 ? "s" : ""}`;
         }
-
-        return `${months} mo`;
+        
+        return `${months}+ month${months > 1 ? "s" : ""}`;
     };
 
     return (
