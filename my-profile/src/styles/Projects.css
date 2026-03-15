@@ -1,6 +1,6 @@
 #Projects {
     background-color: var(--color-white);
-    padding: 4rem;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -41,19 +41,23 @@
     top: 50%;
     transform: translateY(-50%);
     border: none;
-    padding: 0.6rem 0.9rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
     display: none;
 }
 
-.arrow.left {
-    left: 10px;
+.arrow.back {
+    /* left: 5px; */
 }
 
-.arrow.right {
+.arrow.forward {
     right: 10px;
+}
+
+.arrow-symbol {
+    font-size: 1.5rem;
 }
 
 @media (min-width: 1024px) {
