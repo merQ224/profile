@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #FFFFFF;
+  color: var(--color-white);
 }
 
 .footer__links {
@@ -18,7 +18,7 @@
 
 .footer__links a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: var(--color-white);
   transition: opacity 0.2s ease;
 }
 

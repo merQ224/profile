@@ -1,12 +1,12 @@
 #Projects {
-    background-color: #FFF;
+    background-color: var(--color-white);
     padding: 4rem;
     text-align: center;
 }
 
 .wheel-wrapper {
     position: relative;
-    background-color: #393D7E;
+    background-color: var(--color-primary);
 }
 
 .wheel {
@@ -24,8 +24,8 @@
 
 .project-card {
     scroll-snap-align: center;
-    background-color: #5459AC;
-    color: #FFF;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3 ease;
     cursor: pointer;
@@ -54,10 +54,6 @@
 
 .arrow.right {
     right: 10px;
-}
-
-.arrow {
-    display: none;
 }
 
 @media (min-width: 1024px) {
