@@ -1,4 +1,5 @@
 import valentine from '../assets/project-gif/valentine.gif';
+import aiService from '../assets/project-gif/aiService.gif';
 
 export const projectData = [
     {
@@ -20,7 +21,7 @@ export const projectData = [
         area: "Backend",
         description: "This is a serverless backend powered by Node.js (TypeScript) that provides text redaction and summarisation APIs. Uses Hugging Face models for summarisation and NER (Named Entity Recognition) to detect and redact sensitive information such as names, emails, phone numbers and addresses.",
         language: "TypeScript, NodeJS",
-        gif: "api-summarise-sr.gif"
+        gif: aiService
     },
     {
         title: "CSV Utility",
