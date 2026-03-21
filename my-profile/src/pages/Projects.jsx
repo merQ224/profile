@@ -24,8 +24,8 @@ function Projects() {
             <p>For more information, can find in my github</p>
 
             <div className="wheel-wrapper">
-            <Button variant="primary" className="arrow left" onClick={() => scroll("left")}>
-                ←
+            <Button variant="primary" className="arrow back" onClick={() => scroll("left")}>
+                <span className="arrow-symbol">←</span>
             </Button>
 
                 <div className="wheel" ref={scrollRef}>
@@ -40,8 +40,8 @@ function Projects() {
                 ))}
                 </div>
 
-                <Button variant="primary" className="arrow right" onClick={() => scroll("right")}>
-                    →
+                <Button variant="primary" className="arrow forward" onClick={() => scroll("right")}>
+                    <span className="arrow-symbol">→</span>
                 </Button>
             </div>
         </section>

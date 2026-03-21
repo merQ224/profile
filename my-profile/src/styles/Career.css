@@ -1,7 +1,7 @@
 #Career {
     padding: 4rem;
-    background-color: #393D7E;
-    color: #6DC3BB;
+    background-color: var(--color-primary);
+    color: var(--color-accent);
     text-align: center;
     h2 {
         margin-bottom: 4rem;
@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: #5459AC;
+    background: var(--color-secondary);
     z-index: 0;
 }
 
@@ -39,21 +39,21 @@
     height: 20px;
     border-radius: 50%;
     margin: 0 auto 8px;
-    background: #5459AC;
+    background: var(--color-secondary);
     transition: transform 0.2s ease;
 }
 
 .Career_circle:hover {
-    background-color: #6DC3BB;
+    background-color: var(--color-accent);
 }
 
 .Career_item.active .Career_circle {
-    background: #6DC3BB;
+    background: var(--color-accent);
     transform: scale(1.5);
 }
 
 .Career_Title {
-    color: #F2AEBB;
+    color: var(--color-pink);
 }
 
 .Career_label {
@@ -73,7 +73,7 @@
     width: 0%;
     transform: translateY(22px);
     height: 2px;
-    background: #6DC3BB;
+    background: var(--color-accent);
     transition: width 0.3s ease;
 }
 
@@ -88,6 +88,6 @@
 .Career_details {
     max-width: 700px;
     margin: auto;
-    color: #FFF;
+    color: var(--color-white);
     text-align: left;
 }

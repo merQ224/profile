@@ -6,8 +6,8 @@
     align-items: center;
     text-align: center;
     margin: 0;
-    background-color: #393D7E;
-    color: #6DC3BB;
+    background-color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 .intro {
@@ -15,5 +15,5 @@
 }
 
 .passion {
-    color: #FFFFFF;
+    color: var(--color-white);
 }

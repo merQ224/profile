@@ -1,12 +1,12 @@
 #Projects {
-    background-color: #FFF;
-    padding: 4rem;
+    background-color: var(--color-white);
+    padding: 2rem;
     text-align: center;
 }
 
 .wheel-wrapper {
     position: relative;
-    background-color: #393D7E;
+    background-color: var(--color-primary);
 }
 
 .wheel {
@@ -24,8 +24,8 @@
 
 .project-card {
     scroll-snap-align: center;
-    background-color: #5459AC;
-    color: #FFF;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3 ease;
     cursor: pointer;
@@ -41,23 +41,23 @@
     top: 50%;
     transform: translateY(-50%);
     border: none;
-    padding: 0.6rem 0.9rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
     display: none;
 }
 
-.arrow.left {
-    left: 10px;
+.arrow.back {
+    /* left: 5px; */
 }
 
-.arrow.right {
+.arrow.forward {
     right: 10px;
 }
 
-.arrow {
-    display: none;
+.arrow-symbol {
+    font-size: 1.5rem;
 }
 
 @media (min-width: 1024px) {
