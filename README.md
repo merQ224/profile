@@ -81,3 +81,4 @@ npm run preview
 - Animations
 - Performance Optimisation
 - Accessibility
+- Mobile compatible
