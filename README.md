@@ -60,10 +60,12 @@ open http://localhost:5173
 npm run build
 - Build output will be generated in dist/ folder
 
+npm run deploy
+
 ### Preview production build (locally)
 
 npm run preview 
-
+- Available here: https://merQ224.github.io/profile
 ---
 
 ## Purpose
