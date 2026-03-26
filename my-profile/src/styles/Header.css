@@ -15,7 +15,7 @@ nav {
     justify-self: center;
     display: flex;
     gap: 2rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-nav);
     border-radius: 25px;
     position: fixed;
     z-index: 1;
