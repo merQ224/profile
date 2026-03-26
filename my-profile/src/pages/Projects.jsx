@@ -21,20 +21,20 @@ function Projects() {
     return (
         <section id="Projects">
             <h2>My Projects</h2>
-            <p>For more information, can find in my github</p>
+            <p>Explore my projects on <a target="_blank" href="https://github.com/merQ224">Github</a></p>
 
             <div className="wheel-wrapper">
             <Button variant="primary" className="arrow back" onClick={() => scroll("left")}>
                 <span className="arrow-symbol">←</span>
             </Button>
 
-                <div className="wheel" ref={scrollRef}>
+                <div className="wheel" ref={ scrollRef }>
                     {projectData.map((project) => (
-                    <div key={project.id} className="project-card">
-                        <img src={project.gif} alt={project.title} width="500px"/>
+                    <div key={ project.id } className="project-card">
+                        <img src={ project.gif } alt={ project.title }/>
                         <div className="card-content">
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
+                            <h3>{ project.title }</h3>
+                            <p>{ project.description }</p>
                         </div>
                     </div>
                 ))}
