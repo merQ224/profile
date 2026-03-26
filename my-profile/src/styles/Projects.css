@@ -1,12 +1,23 @@
 #Projects {
     background-color: var(--color-white);
-    padding: 2rem;
     text-align: center;
+
+    a {
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        color: var(--color-accent);
+    }
+
+    a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-accent);
+        text-decoration-thickness: 2px;
+    }
 }
 
 .wheel-wrapper {
     position: relative;
-    background-color: var(--color-primary);
 }
 
 .wheel {
@@ -29,6 +40,12 @@
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3 ease;
     cursor: pointer;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+    }
 }
 
 .project-card:hover {
@@ -46,10 +63,6 @@
     cursor: pointer;
     z-index: 2;
     display: none;
-}
-
-.arrow.back {
-    /* left: 5px; */
 }
 
 .arrow.forward {
