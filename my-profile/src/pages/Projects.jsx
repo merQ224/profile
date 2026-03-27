@@ -35,6 +35,7 @@ function Projects() {
                         <div className="card-content">
                             <h3>{ project.title }</h3>
                             <p>{ project.description }</p>
+                            <a className="repo-link" target="_blank" href={project.repo}>View on Github</a>
                         </div>
                     </div>
                 ))}

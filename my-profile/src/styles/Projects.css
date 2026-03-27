@@ -29,11 +29,9 @@
     padding: 1rem 2rem;
 }
 
-.wheel::-webkit-scrollbar {
-    display: none;
-}
-
 .project-card {
+    display: flex;
+    flex-direction: column;
     scroll-snap-align: center;
     background-color: var(--color-secondary);
     color: var(--color-white);
@@ -51,6 +49,17 @@
 .project-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(57, 61, 126, 0.3);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.repo-link {
+    margin-top: auto;
 }
 
 .arrow {
