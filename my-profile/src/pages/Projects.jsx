@@ -21,7 +21,7 @@ function Projects() {
     return (
         <section id="Projects">
             <h2>My Projects</h2>
-            <p>Explore my projects on <a target="_blank" href="https://github.com/merQ224">Github</a></p>
+            <p>Explore my projects on <a className="github-link" target="_blank" href="https://github.com/merQ224">Github</a></p>
 
             <div className="wheel-wrapper">
             <Button variant="primary" className="arrow back" onClick={() => scroll("left")}>
@@ -35,6 +35,7 @@ function Projects() {
                         <div className="card-content">
                             <h3>{ project.title }</h3>
                             <p>{ project.description }</p>
+                            <a className="repo-link" target="_blank" href={project.repo}>View on Github</a>
                         </div>
                     </div>
                 ))}
